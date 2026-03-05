@@ -24,7 +24,7 @@ const Login = () => {
         setIsLoading(true);
 
         try {
-            const response = await axios.post('http://localhost:5000/login', { username, password });
+            const response = await axios.post('https://login-app-backend-dw4t.onrender.com/login', { username, password });
             if (response.status === 200) {
                 localStorage.setItem('username', username);
                 navigate('/welcome');
